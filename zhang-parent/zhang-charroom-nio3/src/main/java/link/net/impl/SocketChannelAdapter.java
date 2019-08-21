@@ -20,6 +20,8 @@ public class SocketChannelAdapter implements Sender, Receiver, Cloneable {
     private IoArgs.IoArgsEventListener receiveIoEventListener;
     private IoArgs.IoArgsEventListener sendIoEventListener;
 
+    private IoArgs receiveTemp;
+
     public SocketChannelAdapter(SocketChannel channel, IoProvider ioProvider,
                                 OnChannelStatusChangedListener listener) throws IOException {
         this.channel = channel;
@@ -29,17 +31,22 @@ public class SocketChannelAdapter implements Sender, Receiver, Cloneable {
         channel.configureBlocking(false);
     }
 
-
     @Override
-    public boolean receiveAsync(IoArgs.IoArgsEventListener listener) throws IOException {
+    public boolean receiveAsync(IoArgs ioArgs) throws IOException {
         if (isClosed.get()) {
             throw new IOException("Current channel is closed!");
         }
 
-        receiveIoEventListener = listener;
-
+        receiveTemp = ioArgs;
         return ioProvider.registerInput(channel, inputCallback);
     }
+
+    @Override
+    public void setReceiveListener(IoArgs.IoArgsEventListener listener) {
+
+        receiveIoEventListener = listener;
+    }
+
 
     @Override
     public boolean sendAsync(IoArgs args, IoArgs.IoArgsEventListener listener) throws IOException {
@@ -73,16 +80,14 @@ public class SocketChannelAdapter implements Sender, Receiver, Cloneable {
                 return;
             }
 
-            IoArgs args = new IoArgs();
+            IoArgs args = receiveTemp;
             IoArgs.IoArgsEventListener listener = SocketChannelAdapter.this.receiveIoEventListener;
 
-            if (listener != null) {
-                listener.onStarted(args);
-            }
+            listener.onStarted(args);
 
             try {
                 // 具体的读取操作
-                if (args.read(channel) > 0 && listener != null) {
+                if (args.read(channel) > 0 ) {
                     // 读取完成回调
                     listener.onCompleted(args);
                 } else {
@@ -103,6 +108,27 @@ public class SocketChannelAdapter implements Sender, Receiver, Cloneable {
             if (isClosed.get()) {
                 return;
             }
+
+            IoArgs ioArgs = getAttach();
+            IoArgs.IoArgsEventListener listener = sendIoEventListener;
+
+            listener.onStarted( ioArgs );
+
+            try{
+
+                if( ioArgs.write( channel ) > 0 ){
+
+                    listener.onCompleted( ioArgs);
+                }else{
+
+                    throw new IOException("cannot write any date ");
+                }
+
+            }catch (Exception e){
+
+                CloseUtils.close( SocketChannelAdapter.this );
+            }
+
             // TODO
             sendIoEventListener.onCompleted(null);
         }
