@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="zhang-charroom-bio" />
+        <module name="zhang-charroom-netty" />
+        <module name="zhang-charroom-nio1" />
+        <module name="zhang-charroom-nio2" />
+        <module name="zhang-charroom-nio3" />
+        <module name="zhang-charroom-nio4" />
+        <module name="zhang-charroom-nio5" />
+        <module name="zhang-websocket" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="zhang-charroom-bio" target="1.5" />
+      <module name="zhang-charroom-netty" target="1.5" />
+      <module name="zhang-charroom-nio1" target="1.5" />
+      <module name="zhang-charroom-nio2" target="1.5" />
+      <module name="zhang-charroom-nio3" target="1.5" />
+      <module name="zhang-charroom-nio4" target="1.5" />
+      <module name="zhang-charroom-nio5" target="1.5" />
+      <module name="zhang-parent" target="1.5" />
+      <module name="zhang-websocket" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

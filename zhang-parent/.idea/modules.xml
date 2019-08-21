@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/zhang-charroom-bio/zhang-charroom-bio.iml" filepath="$PROJECT_DIR$/zhang-charroom-bio/zhang-charroom-bio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhang-charroom-netty/zhang-charroom-netty.iml" filepath="$PROJECT_DIR$/zhang-charroom-netty/zhang-charroom-netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhang-charroom-nio1/zhang-charroom-nio1.iml" filepath="$PROJECT_DIR$/zhang-charroom-nio1/zhang-charroom-nio1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhang-charroom-nio2/zhang-charroom-nio2.iml" filepath="$PROJECT_DIR$/zhang-charroom-nio2/zhang-charroom-nio2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhang-charroom-nio3/zhang-charroom-nio3.iml" filepath="$PROJECT_DIR$/zhang-charroom-nio3/zhang-charroom-nio3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhang-charroom-nio4/zhang-charroom-nio4.iml" filepath="$PROJECT_DIR$/zhang-charroom-nio4/zhang-charroom-nio4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhang-charroom-nio5/zhang-charroom-nio5.iml" filepath="$PROJECT_DIR$/zhang-charroom-nio5/zhang-charroom-nio5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhang-parent.iml" filepath="$PROJECT_DIR$/zhang-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhang-websocket/zhang-websocket.iml" filepath="$PROJECT_DIR$/zhang-websocket/zhang-websocket.iml" />
+    </modules>
+  </component>
+</project>
