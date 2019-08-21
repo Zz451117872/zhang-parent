@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhang-charroom-bio" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhang-charroom-netty" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhang-charroom-nio1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhang-charroom-nio2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhang-charroom-nio3" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhang-charroom-nio4" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhang-charroom-nio5" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhang-websocket" charset="UTF-8" />
+  </component>
+</project>
