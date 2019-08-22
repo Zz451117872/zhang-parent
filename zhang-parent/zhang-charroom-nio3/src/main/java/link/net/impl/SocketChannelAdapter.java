@@ -96,8 +96,6 @@ public class SocketChannelAdapter implements Sender, Receiver, Cloneable {
             } catch (IOException ignored) {
                 CloseUtils.close(SocketChannelAdapter.this);
             }
-
-
         }
     };
 
@@ -128,9 +126,6 @@ public class SocketChannelAdapter implements Sender, Receiver, Cloneable {
 
                 CloseUtils.close( SocketChannelAdapter.this );
             }
-
-            // TODO
-            sendIoEventListener.onCompleted(null);
         }
     };
 

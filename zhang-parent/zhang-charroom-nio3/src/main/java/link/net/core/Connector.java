@@ -1,6 +1,8 @@
 package link.net.core;
 
 import link.net.impl.SocketChannelAdapter;
+import link.net.impl.async.AsyncReceiveDispatcher;
+import link.net.impl.async.AsyncSendDispatcher;
 import link.packaging.ReceivePacket;
 import link.packaging.SendPacket;
 import link.packaging.impl.StringReceivePacket;
@@ -12,6 +14,7 @@ import java.nio.channels.SocketChannel;
 import java.util.UUID;
 
 public class Connector implements Closeable, SocketChannelAdapter.OnChannelStatusChangedListener {
+
     private UUID key = UUID.randomUUID();
     private SocketChannel channel;
     private Sender sender;
@@ -29,18 +32,12 @@ public class Connector implements Closeable, SocketChannelAdapter.OnChannelStatu
         this.sender = adapter;
         this.receiver = adapter;
 
-        //readNextMessage();
-    }
+        sendDispatcher = new AsyncSendDispatcher( sender );
+        receiveDispatcher = new AsyncReceiveDispatcher( receiver , receivePacketCallback);
 
-//    private void readNextMessage() {
-//        if (receiver != null) {
-//            try {
-//                receiver.receiveAsync(echoReceiveListener);
-//            } catch (IOException e) {
-//                System.out.println("开始接收数据异常：" + e.getMessage());
-//            }
-//        }
-//    }
+        //启动接收
+        receiveDispatcher.start();
+    }
 
     public void send( String msg){
 
@@ -52,6 +49,11 @@ public class Connector implements Closeable, SocketChannelAdapter.OnChannelStatu
     @Override
     public void close() throws IOException {
 
+        receiveDispatcher.close();
+        sendDispatcher.close();
+        sender.close();
+        receiver.close();
+        channel.close();
     }
 
     @Override
@@ -71,22 +73,7 @@ public class Connector implements Closeable, SocketChannelAdapter.OnChannelStatu
         }
     };
 
-//    private IoArgs.IoArgsEventListener echoReceiveListener = new IoArgs.IoArgsEventListener() {
-//        @Override
-//        public void onStarted(IoArgs args) {
-//
-//        }
-//
-//        @Override
-//        public void onCompleted(IoArgs args) {
-//            // 打印
-//            onReceiveNewMessage(args.bufferString());
-//            // 读取下一条数据
-//            readNextMessage();
-//        }
-//    };
-
-    protected void onReceiveNewMessage(String str) {
-        System.out.println(key.toString() + ":" + str);
+    protected void onReceiveNewMessage( String str ) {
+        System.out.println( key.toString() + ":" + str);
     }
 }

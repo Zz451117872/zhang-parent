@@ -3,6 +3,7 @@ package link.net.impl.async;
 import link.net.core.IoArgs;
 import link.net.core.SendDispatcher;
 import link.net.core.Sender;
+import link.packaging.ReceivePacket;
 import link.packaging.SendPacket;
 import link.utils.CloseUtils;
 
@@ -16,6 +17,7 @@ public class AsyncSendDispatcher implements SendDispatcher{
     private final Sender sender;
     private final Queue<SendPacket> queue = new ConcurrentLinkedQueue<>();
 
+    private final AtomicBoolean isClosed = new AtomicBoolean( false );
     private final AtomicBoolean isSending = new AtomicBoolean();
 
     private IoArgs ioArgs = new IoArgs();
@@ -63,7 +65,7 @@ public class AsyncSendDispatcher implements SendDispatcher{
             isSending.set( false );
             return;
         }
-        total =packet.length();
+        total = packet.length();
         position = 0;
 
         sendCurrentPacket();
@@ -128,6 +130,16 @@ public class AsyncSendDispatcher implements SendDispatcher{
 
     @Override
     public void close() throws IOException {
-        
+
+        if( isClosed.compareAndSet( false , true)){
+
+            isSending.set( false);
+            SendPacket packet = this.packetTemp;
+            if( packet != null ){
+
+                packetTemp = null;
+                CloseUtils.close( packet );
+            }
+        }
     }
 }
