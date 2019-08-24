@@ -13,11 +13,12 @@ public class IoArgs {
     private ByteBuffer buffer = ByteBuffer.allocate( 256 );
 
     private int limit = 256;
+    private int empty;
 
     //从bytes中读取数据
     public int readFrom(ReadableByteChannel channel)throws IOException{
 
-        startWriting();
+        //startWriting();
 
         int bytesProduced = 0;
 
@@ -30,7 +31,7 @@ public class IoArgs {
             bytesProduced += len;
         }
 
-        finishWriting();
+        //finishWriting();
 
         return bytesProduced;
     }
@@ -106,7 +107,7 @@ public class IoArgs {
     //设置单次写操作的容纳区间
     public void limit( int limit ){
 
-        this.limit = limit;
+        this.limit = Math.min( limit , buffer.capacity() );
     }
 
     public String bufferString() {
@@ -126,6 +127,41 @@ public class IoArgs {
 
     public int readLength( ){
         return buffer.getInt();
+    }
+
+    public boolean remained() {
+        return buffer.remaining() > 0;
+    }
+
+    public int readFrom(byte[] bytes, int offset, int count) {
+
+        int size = Math.min( count , buffer.remaining() );
+
+        if( size <= 0 ){
+            return  0;
+        }
+
+        buffer.put( bytes , offset , size );
+
+        return size;
+    }
+
+    public int writeTo(byte[] bytes, int offset) {
+
+        int size = Math.min( bytes.length - offset , buffer.remaining() );
+        buffer.get( bytes , offset , size );
+        return size;
+    }
+
+    public int fillEmpty(int size) {
+
+        int fillSize = Math.min( size , buffer.remaining() );
+        buffer.position( buffer.position() + fillSize );
+        return fillSize;
+    }
+
+    public int setEmpty(int empty) {
+        return 0;
     }
 
 

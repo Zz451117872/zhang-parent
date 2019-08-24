@@ -34,6 +34,10 @@ public class Server {
         do {
             str = bufferedReader.readLine();
 
+            if( str == null || str.length() == 0 ){
+                break;
+            }
+
             if( "00bye00".equalsIgnoreCase( str)){
                 break;
             }

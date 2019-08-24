@@ -1,4 +1,3 @@
-net\charroom\client\ClientTest.class
 net\charroom\client\UDPSearcher$1.class
 link\net\impl\SocketChannelAdapter$OnChannelStatusChangedListener.class
 link\net\core\IoProvider.class

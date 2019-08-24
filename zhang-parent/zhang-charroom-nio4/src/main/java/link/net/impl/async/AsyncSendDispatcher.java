@@ -7,14 +7,11 @@ import link.packaging.SendPacket;
 import link.utils.CloseUtils;
 
 import java.io.IOException;
-import java.nio.channels.Channels;
-import java.nio.channels.ReadableByteChannel;
-import java.util.Arrays;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class AsyncSendDispatcher implements SendDispatcher ,IoArgs.IoArgsEventProcessor{
+public class AsyncSendDispatcher implements SendDispatcher ,IoArgs.IoArgsEventProcessor,AsyncPacketReader.PacketProvider{
 
     private final Sender sender;
     private final Queue<SendPacket> queue = new ConcurrentLinkedQueue<>();
@@ -22,13 +19,7 @@ public class AsyncSendDispatcher implements SendDispatcher ,IoArgs.IoArgsEventPr
     private final AtomicBoolean isClosed = new AtomicBoolean( false );
     private final AtomicBoolean isSending = new AtomicBoolean();
 
-    private IoArgs ioArgs = new IoArgs();
-
-    private SendPacket<?> packetTemp;
-
-    private long total;
-    private int position;
-    private ReadableByteChannel packChannel;
+    private final AsyncPacketReader reader = new AsyncPacketReader( this);
 
     public AsyncSendDispatcher( Sender sender ){
 
@@ -37,124 +28,105 @@ public class AsyncSendDispatcher implements SendDispatcher ,IoArgs.IoArgsEventPr
     }
 
     @Override
-    public IoArgs provideIoArgs() {
-        IoArgs ioArgs = this.ioArgs;
-
-        if( packChannel == null ){
-
-            packChannel = Channels.newChannel( packetTemp.open() );
-            ioArgs.limit( 4 );
-            ioArgs.writeLength( (int)packetTemp.length() );
-        }else{
-
-            ioArgs.limit( (int)Math.min( ioArgs.capacity() , total - position));
-            try {
-                int count = ioArgs.readFrom( packChannel );
-
-                position += count;
-            } catch (IOException e) {
-                e.printStackTrace();
-                return null;
-            }
+    public SendPacket takePacket() {
+        SendPacket packet = queue.poll();
+        if( packet == null  ){
+            //队列为空，取消发送状态
+            isSending.set( false );
+            return null;
         }
 
-        return ioArgs;
+        if(  packet.isCanceled() ){
+            //已取消，不用发送
+            return takePacket();
+        }
+        return packet;
+    }
+
+    @Override
+    public void completedPacket(SendPacket packet, boolean isSucceed) {
+
+        CloseUtils.close( packet );
+    }
+
+    @Override
+    public IoArgs provideIoArgs() {
+
+        return  isClosed.get() ? null : reader.fillData();
     }
 
     @Override
     public void onConsumeFailed(IoArgs args, Throwable e) {
 
         e.printStackTrace();
+
+        synchronized ( isSending ){
+            isSending.set( false);
+        }
+        requestSend();
     }
 
     @Override
     public void onConsumeCompleted(IoArgs args) {
         //继续发送当前包
-        sendCurrentPacket();
+        synchronized (isSending){
+            isSending.set(false);
+        }
+        requestSend();
     }
 
     @Override
     public void send(SendPacket packet) {
 
         queue.offer( packet );
-        if( isSending.compareAndSet( false , true)){
-            sendNextPacket();
+        requestSend();
+
+    }
+
+    //请求网络进行发送
+    private void requestSend() {
+
+        synchronized (isSending){
+            if( isSending.get() || isClosed.get() ){
+                return;
+            }
+
+            if( reader.requestTakePacket() ){
+                try{
+                    boolean isSucceed = sender.postSendAsync(  );
+
+                    if( isSucceed ){
+
+                        isSending.set( true );
+                    }
+                }catch (IOException e){
+
+                    closdAndNotfy();
+                }
+            }
         }
 
     }
 
-    private SendPacket takePacket(){
-
-        SendPacket packet = queue.poll();
-        if( packet != null && packet.isCanceled() ){
-
-            return takePacket();
-        }
-        return packet;
-    }
-
-    private void sendNextPacket(){
-
-        SendPacket temp = packetTemp;
-        if( temp != null ){
-            CloseUtils.close( temp );
-        }
-
-        SendPacket packet =  packetTemp = takePacket();
-
-        if( packet == null ){
-            isSending.set( false );
-            return;
-        }
-        total = packet.length();
-        position = 0;
-
-        sendCurrentPacket();
-    }
-
-    private void sendCurrentPacket() {
-
-        if( position >= total ){
-
-            completePacket( position == total );
-            sendNextPacket();
-            return;
-        }
-
-        try{
-            sender.postSendAsync(  );
-        }catch (IOException e){
-
-            closdAndNotfy();
-        }
-    }
-
-    private void completePacket( boolean isSuccesd){
-
-        SendPacket packet = this.packetTemp;
-        if( packet == null ){
-            return;
-        }
-        CloseUtils.close( packet );
-        CloseUtils.close( packChannel);
-
-        packetTemp = null;
-        packChannel = null;
-        total = 0;
-        position = 0;
-    }
 
     private void closdAndNotfy() {
 
         CloseUtils.close( this );
     }
 
-
+    private final Object queueLock = new Object();
 
     @Override
     public void cancel(SendPacket packet) {
 
+        boolean ret = queue.remove( packet );
 
+        if( ret ){
+            packet.cancel();
+            return;
+        }
+
+        reader.cancel( packet );
     }
 
     @Override
@@ -162,9 +134,14 @@ public class AsyncSendDispatcher implements SendDispatcher ,IoArgs.IoArgsEventPr
 
         if( isClosed.compareAndSet( false , true)){
 
-            isSending.set( false);
             //异常关闭导致的完成操作
-            completePacket( false );
+            reader.close( );
+            queue.clear();
+
+            synchronized (isSending) {
+                isSending.set(false);
+            }
+
         }
     }
 }

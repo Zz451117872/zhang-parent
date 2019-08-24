@@ -1,5 +1,7 @@
 package link.packaging;
 
+import org.omg.CORBA.PUBLIC_MEMBER;
+
 import java.io.Closeable;
 import java.io.IOException;
 
@@ -46,4 +48,10 @@ public abstract class Packet<Stream extends Closeable> implements Closeable{
             stream = null;
         }
     }
+
+    //头部额外信息，用于携带额外的校验信息等
+    public byte[] headerInfo(){
+        return null;
+    }
+
 }

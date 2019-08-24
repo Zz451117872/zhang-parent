@@ -18,6 +18,11 @@ public class BytesSendPacket extends SendPacket<ByteArrayInputStream> {
     }
 
     @Override
+    public int available() {
+        return 0;
+    }
+
+    @Override
     public byte type() {
         return TYPE_MEMORY_BYTES;
     }
