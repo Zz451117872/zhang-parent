@@ -7,11 +7,14 @@ import link.packaging.SendPacket;
 import link.utils.CloseUtils;
 
 import java.io.IOException;
+import java.nio.channels.Channels;
+import java.nio.channels.ReadableByteChannel;
+import java.util.Arrays;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class AsyncSendDispatcher implements SendDispatcher{
+public class AsyncSendDispatcher implements SendDispatcher ,IoArgs.IoArgsEventProcessor{
 
     private final Sender sender;
     private final Queue<SendPacket> queue = new ConcurrentLinkedQueue<>();
@@ -21,14 +24,53 @@ public class AsyncSendDispatcher implements SendDispatcher{
 
     private IoArgs ioArgs = new IoArgs();
 
-    private SendPacket packetTemp;
+    private SendPacket<?> packetTemp;
 
-    private int total;
+    private long total;
     private int position;
+    private ReadableByteChannel packChannel;
 
     public AsyncSendDispatcher( Sender sender ){
 
         this.sender = sender;
+        sender.setSendListener( this );
+    }
+
+    @Override
+    public IoArgs provideIoArgs() {
+        IoArgs ioArgs = this.ioArgs;
+
+        if( packChannel == null ){
+
+            packChannel = Channels.newChannel( packetTemp.open() );
+            ioArgs.limit( 4 );
+            ioArgs.writeLength( (int)packetTemp.length() );
+        }else{
+
+            ioArgs.limit( (int)Math.min( ioArgs.capacity() , total - position));
+            try {
+                int count = ioArgs.readFrom( packChannel );
+
+                position += count;
+            } catch (IOException e) {
+                e.printStackTrace();
+                return null;
+            }
+        }
+
+        return ioArgs;
+    }
+
+    @Override
+    public void onConsumeFailed(IoArgs args, Throwable e) {
+
+        e.printStackTrace();
+    }
+
+    @Override
+    public void onConsumeCompleted(IoArgs args) {
+        //继续发送当前包
+        sendCurrentPacket();
     }
 
     @Override
@@ -72,35 +114,34 @@ public class AsyncSendDispatcher implements SendDispatcher{
 
     private void sendCurrentPacket() {
 
-        IoArgs ioArgs = this.ioArgs;
-
-        //开始清理
-        ioArgs.startWriting();
-
         if( position >= total ){
 
+            completePacket( position == total );
             sendNextPacket();
             return;
-        }else if( position == 0 ){
-
-            //首包，需要带长度信息
-            ioArgs.writeLength( total );
         }
 
-        byte[] bytes = packetTemp.bytes();
-        //把bytes的数据写入到args
-        int count = ioArgs.readFrom( bytes , position );
-        position += count;
-
-        //完成封装
-        ioArgs.finishWriting();
-
         try{
-            sender.sendAsync( ioArgs , ioArgsEventListener );
+            sender.postSendAsync(  );
         }catch (IOException e){
 
             closdAndNotfy();
         }
+    }
+
+    private void completePacket( boolean isSuccesd){
+
+        SendPacket packet = this.packetTemp;
+        if( packet == null ){
+            return;
+        }
+        CloseUtils.close( packet );
+        CloseUtils.close( packChannel);
+
+        packetTemp = null;
+        packChannel = null;
+        total = 0;
+        position = 0;
     }
 
     private void closdAndNotfy() {
@@ -108,18 +149,7 @@ public class AsyncSendDispatcher implements SendDispatcher{
         CloseUtils.close( this );
     }
 
-    private final IoArgs.IoArgsEventListener ioArgsEventListener = new IoArgs.IoArgsEventListener() {
-        @Override
-        public void onStarted(IoArgs args) {
 
-        }
-
-        @Override
-        public void onCompleted(IoArgs args) {
-            //继续发送当前包
-            sendCurrentPacket();
-        }
-    };
 
     @Override
     public void cancel(SendPacket packet) {
@@ -133,12 +163,8 @@ public class AsyncSendDispatcher implements SendDispatcher{
         if( isClosed.compareAndSet( false , true)){
 
             isSending.set( false);
-            SendPacket packet = this.packetTemp;
-            if( packet != null ){
-
-                packetTemp = null;
-                CloseUtils.close( packet );
-            }
+            //异常关闭导致的完成操作
+            completePacket( false );
         }
     }
 }

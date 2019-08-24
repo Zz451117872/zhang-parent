@@ -2,25 +2,24 @@ package link.packaging.impl;
 
 import link.packaging.SendPacket;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
-public class StringSendPacket extends SendPacket {
+public class StringSendPacket extends BytesSendPacket {
 
-    private final byte[] bytes;
 
     public StringSendPacket( String msg ){
-
-        this.bytes = msg.getBytes();
-        this.length = bytes.length;
+        super( msg.getBytes() );
     }
 
     @Override
-    public byte[] bytes() {
-        return bytes;
+    public byte type() {
+        return TYPE_MEMORY_STRING;
     }
 
-    @Override
-    public void close() throws IOException {
 
-    }
+
+
+
 }

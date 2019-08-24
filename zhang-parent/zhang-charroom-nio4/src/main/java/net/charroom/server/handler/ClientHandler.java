@@ -2,8 +2,12 @@ package net.charroom.server.handler;
 
 
 import link.net.core.Connector;
+import link.packaging.Packet;
+import link.packaging.ReceivePacket;
 import link.utils.CloseUtils;
+import link.utils.FileUtils;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.channels.SocketChannel;
 
@@ -12,10 +16,18 @@ public class ClientHandler extends Connector{
     private final ClientHandlerCallback clientHandlerCallback;
     private final String clientInfo;
 
-    public ClientHandler(SocketChannel socketChannel, ClientHandlerCallback clientHandlerCallback) throws IOException {
+    private final File cachePath;
+
+    @Override
+    protected File createReceiveFile() {
+        return FileUtils.createRandomTemp( cachePath );
+    }
+
+    public ClientHandler(SocketChannel socketChannel, ClientHandlerCallback clientHandlerCallback,File cachePath) throws IOException {
 
         this.clientHandlerCallback = clientHandlerCallback;
         this.clientInfo = socketChannel.getRemoteAddress().toString();
+        this.cachePath = cachePath;
 
         System.out.println("新客户端连接：" + clientInfo);
         setup( socketChannel );
@@ -34,10 +46,17 @@ public class ClientHandler extends Connector{
     }
 
     @Override
-    protected void onReceiveNewMessage(String str) {
-        super.onReceiveNewMessage(str);
-        clientHandlerCallback.onNewMessageArrived( this , str );
+    protected void onReceiveNewPacket(ReceivePacket packet) {
+        super.onReceiveNewPacket(packet);
+        if( packet.type() == Packet.TYPE_MEMORY_STRING ){
+
+            String string = (String)packet.entity();
+            System.out.println( key.toString() + ":" + string );
+
+            clientHandlerCallback.onNewMessageArrived( this , string );
+        }
     }
+
 
     private void exitBySelf() {
         exit();
@@ -52,63 +71,5 @@ public class ClientHandler extends Connector{
         void onNewMessageArrived(ClientHandler handler, String msg);
     }
 
-//    class ClientWriteHandler {
-//        private boolean done = false;
-//        private final Selector selector;
-//        private final ByteBuffer byteBuffer;
-//        private final ExecutorService executorService;
-//
-//        ClientWriteHandler(Selector selector) {
-//            this.selector = selector;
-//            this.byteBuffer = ByteBuffer.allocate(256);
-//            this.executorService = Executors.newSingleThreadExecutor();
-//        }
-//
-//        void exit() {
-//            done = true;
-//            CloseUtils.close(selector);
-//            executorService.shutdownNow();
-//        }
-//
-//        void send(String str) {
-//            if (done) {
-//                return;
-//            }
-//            executorService.execute(new WriteRunnable(str) );
-//        }
-//
-//        class WriteRunnable implements Runnable {
-//            private final String msg;
-//
-//            WriteRunnable(String msg) {
-//                this.msg = msg + '\n';
-//            }
-//
-//            @Override
-//            public void run() {
-//                if (ClientWriteHandler.this.done) {
-//                    return;
-//                }
-//
-//                byteBuffer.clear();
-//                byteBuffer.put(msg.getBytes());
-//                // 反转操作, 重点
-//                byteBuffer.flip();
-//
-//                while (!done && byteBuffer.hasRemaining()) {
-//                    try {
-//                        int len = socketChannel.write(byteBuffer);
-//                        // len = 0 合法
-//                        if (len < 0) {
-//                            System.out.println("客户端已无法发送数据！");
-//                            ClientHandler.this.exitBySelf();
-//                            break;
-//                        }
-//                    } catch (Exception e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//            }
-//        }
-//    }
+
 }

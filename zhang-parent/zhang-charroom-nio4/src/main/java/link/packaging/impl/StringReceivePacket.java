@@ -1,35 +1,23 @@
 package link.packaging.impl;
 
-import link.packaging.ReceivePacket;
+import java.io.ByteArrayOutputStream;
 
-import java.io.IOException;
 
-public class StringReceivePacket extends ReceivePacket {
-
-    private byte[] buffer;
-    private int position;
+public class StringReceivePacket extends AbsByteArrayReceivePacket<String>{
 
 
     public StringReceivePacket( int len ){
-        buffer = new byte[ len ];
-        length = len;
+        super(len);
     }
 
     @Override
-    public void save(byte[] bytes, int count) {
-
-        System.arraycopy( bytes , 0 , buffer , position , count );
-
-        position += count;
-    }
-
-    public String string(){
-        return new String( buffer );
+    public byte type() {
+        return TYPE_MEMORY_STRING;
     }
 
 
-    @Override
-    public void close() throws IOException {
-
+    public String buildEntity( ByteArrayOutputStream stream ){
+        return new String( stream.toByteArray() );
     }
+
 }

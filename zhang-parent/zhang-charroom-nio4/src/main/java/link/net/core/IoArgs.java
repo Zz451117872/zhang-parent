@@ -2,31 +2,55 @@ package link.net.core;
 
 import java.io.EOFException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.ByteBuffer;
+import java.nio.channels.ReadableByteChannel;
 import java.nio.channels.SocketChannel;
+import java.nio.channels.WritableByteChannel;
 
 public class IoArgs {
-    private byte[] byteBuffer = new byte[256];
-    private ByteBuffer buffer = ByteBuffer.wrap(byteBuffer);
+
+    private ByteBuffer buffer = ByteBuffer.allocate( 256 );
 
     private int limit = 256;
 
     //从bytes中读取数据
-    public int readFrom( byte[] bytes , int offset ){
+    public int readFrom(ReadableByteChannel channel)throws IOException{
 
-        int size = Math.min( bytes.length - offset, buffer.remaining() );
+        startWriting();
 
-        buffer.put( bytes , offset , size );
-        return  size;
+        int bytesProduced = 0;
+
+        while ( buffer.hasRemaining() ){
+
+            int len = channel.read( buffer );
+            if( len < 0 ){
+                throw  new EOFException();
+            }
+            bytesProduced += len;
+        }
+
+        finishWriting();
+
+        return bytesProduced;
     }
 
+
     //写入数据到bytes中
-    public int writeTo( byte[] bytes , int offset ){
+    public int writeTo(WritableByteChannel channel )throws IOException{
 
-        int size = Math.min( bytes.length - offset, buffer.remaining() );
+        int bytesProduced = 0;
 
-        buffer.get( bytes , offset , size );
-        return  size;
+        while ( buffer.hasRemaining() ){
+
+            int len = channel.write( buffer );
+            if( len < 0 ){
+                throw  new EOFException();
+            }
+            bytesProduced += len;
+        }
+
+        return bytesProduced;
     }
 
     //从channel中读取数据
@@ -87,13 +111,13 @@ public class IoArgs {
 
     public String bufferString() {
         // 丢弃换行符
-        return new String(byteBuffer, 0, buffer.position() - 1);
+        return new String(buffer.array(), 0, buffer.position() - 1);
     }
 
     public void writeLength(int total) {
-
+        startWriting();
         buffer.putInt( total );
-
+        finishWriting();
     }
 
     public int capacity(){
@@ -104,9 +128,14 @@ public class IoArgs {
         return buffer.getInt();
     }
 
-    public interface IoArgsEventListener {
-        void onStarted(IoArgs args);
 
-        void onCompleted(IoArgs args);
+    public interface IoArgsEventProcessor {
+
+        //提供一份可消费的ioargs
+        IoArgs provideIoArgs();
+        //消费失败时的回调
+        void onConsumeFailed(IoArgs args , Throwable e);
+        //消费成功时回调
+        void onConsumeCompleted(IoArgs args);
     }
 }

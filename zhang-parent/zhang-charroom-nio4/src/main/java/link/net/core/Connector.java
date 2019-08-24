@@ -3,18 +3,22 @@ package link.net.core;
 import link.net.impl.SocketChannelAdapter;
 import link.net.impl.async.AsyncReceiveDispatcher;
 import link.net.impl.async.AsyncSendDispatcher;
+import link.packaging.Packet;
 import link.packaging.ReceivePacket;
 import link.packaging.SendPacket;
+import link.packaging.impl.BytesReceivePacket;
+import link.packaging.impl.FileReceivePacket;
 import link.packaging.impl.StringReceivePacket;
 import link.packaging.impl.StringSendPacket;
 
 import java.io.Closeable;
+import java.io.File;
 import java.io.IOException;
 import java.nio.channels.SocketChannel;
 import java.util.UUID;
 
-public class Connector implements Closeable, SocketChannelAdapter.OnChannelStatusChangedListener {
-    private UUID key = UUID.randomUUID();
+public abstract class Connector implements Closeable, SocketChannelAdapter.OnChannelStatusChangedListener {
+    protected UUID key = UUID.randomUUID();
     private SocketChannel channel;
     private Sender sender;
     private Receiver receiver;
@@ -40,19 +44,15 @@ public class Connector implements Closeable, SocketChannelAdapter.OnChannelStatu
         //readNextMessage();
     }
 
-//    private void readNextMessage() {
-//        if (receiver != null) {
-//            try {
-//                receiver.receiveAsync(echoReceiveListener);
-//            } catch (IOException e) {
-//                System.out.println("开始接收数据异常：" + e.getMessage());
-//            }
-//        }
-//    }
 
     public void send( String msg){
 
         SendPacket packet = new StringSendPacket( msg );
+
+        sendDispatcher.send( packet );
+    }
+
+    public void send( SendPacket packet){
 
         sendDispatcher.send( packet );
     }
@@ -73,31 +73,39 @@ public class Connector implements Closeable, SocketChannelAdapter.OnChannelStatu
     }
 
     private ReceiveDispatcher.ReceivePacketCallback receivePacketCallback = new ReceiveDispatcher.ReceivePacketCallback() {
+
+        @Override
+        public ReceivePacket<?, ?> onArrivedNewPacket(byte type, long length) {
+
+            switch ( type ){
+                case Packet.TYPE_MEMORY_BYTES:
+                    return new BytesReceivePacket( length );
+                case Packet.TYPE_MEMORY_STRING:
+                     return new StringReceivePacket( (int)length );
+                case Packet.TYPE_STREAM_FILE:
+                    return new FileReceivePacket( length , createReceiveFile() );
+                case Packet.TYPE_STREAM_DIRECT:
+                    return null;
+                    default:
+                        throw new UnsupportedOperationException("unsupport file type");
+
+            }
+        }
+
+
+
         @Override
         public void onReceivePacketCompleted(ReceivePacket packet) {
 
-            if( packet instanceof StringReceivePacket ){
-
-                String msg = ( (StringReceivePacket)packet).string();
-                onReceiveNewMessage( msg );
-            }
+            onReceiveNewPacket( packet );
         }
     };
 
-//    private IoArgs.IoArgsEventListener echoReceiveListener = new IoArgs.IoArgsEventListener() {
-//        @Override
-//        public void onStarted(IoArgs args) {
-//
-//        }
-//
-//        @Override
-//        public void onCompleted(IoArgs args) {
-//            // 打印
-//            onReceiveNewMessage(args.bufferString());
-//            // 读取下一条数据
-//            readNextMessage();
-//        }
-//    };
+    protected abstract File createReceiveFile();
+
+    protected void onReceiveNewPacket( ReceivePacket packet ) {
+        System.out.println( key.toString() + " ,type:" + packet.type() + " ,length:"+ packet.length());
+    }
 
     protected void onReceiveNewMessage( String str ) {
         System.out.println( key.toString() + ":" + str);

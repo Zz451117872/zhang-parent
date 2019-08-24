@@ -1,12 +1,17 @@
 package link.packaging;
 
-public abstract class SendPacket extends  Packet {
+import org.omg.CORBA.PUBLIC_MEMBER;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+public abstract class SendPacket<T extends InputStream> extends  Packet<T> {
 
     private boolean isCanceled;
-
-    public abstract  byte[] bytes();
 
     public boolean isCanceled(){
         return isCanceled;
     }
+
+
 }

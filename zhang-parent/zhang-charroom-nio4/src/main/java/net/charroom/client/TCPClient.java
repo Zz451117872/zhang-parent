@@ -2,9 +2,13 @@ package net.charroom.client;
 
 
 import link.net.core.Connector;
+import link.packaging.Packet;
+import link.packaging.ReceivePacket;
 import link.utils.CloseUtils;
+import link.utils.FileUtils;
 import net.charroom.client.bean.ServerInfo;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.Inet4Address;
 import java.net.InetSocketAddress;
@@ -12,9 +16,17 @@ import java.nio.channels.SocketChannel;
 
 public class TCPClient extends Connector{
 
+    private final File cachePath ;
 
-    public TCPClient(SocketChannel socketChannel) throws IOException {
+    public TCPClient(SocketChannel socketChannel , File cachePath) throws IOException {
+        this.cachePath = cachePath;
         setup( socketChannel );
+    }
+
+    @Override
+    protected File createReceiveFile() {
+
+        return FileUtils.createRandomTemp( cachePath );
     }
 
     public void exit() {
@@ -28,7 +40,7 @@ public class TCPClient extends Connector{
         System.out.println( "连接已关闭，无法读取数据");
     }
 
-    public static TCPClient startWith(ServerInfo info) throws IOException {
+    public static TCPClient startWith(ServerInfo info , File cachePath ) throws IOException {
         SocketChannel socket =  SocketChannel.open();
 
         // 连接本地，端口2000；超时时间3000ms
@@ -39,7 +51,7 @@ public class TCPClient extends Connector{
         System.out.println("服务器信息：" + socket.getRemoteAddress().toString());
 
         try {
-            return new TCPClient(socket);
+            return new TCPClient(socket , cachePath );
         } catch (Exception e) {
             System.out.println("连接异常");
             CloseUtils.close(socket);
@@ -48,50 +60,13 @@ public class TCPClient extends Connector{
         return null;
     }
 
+    @Override
+    protected void onReceiveNewPacket(ReceivePacket packet) {
+        super.onReceiveNewPacket(packet);
+        if( packet.type() == Packet.TYPE_MEMORY_STRING ){
 
-//    static class ReadHandler extends Thread {
-//        private boolean done = false;
-//        private final InputStream inputStream;
-//
-//        ReadHandler(InputStream inputStream) {
-//            this.inputStream = inputStream;
-//        }
-//
-//        @Override
-//        public void run() {
-//            super.run();
-//            try {
-//                // 得到输入流，用于接收数据
-//                BufferedReader socketInput = new BufferedReader(new InputStreamReader(inputStream));
-//
-//                do {
-//                    String str;
-//                    try {
-//                        // 客户端拿到一条数据
-//                        str = socketInput.readLine();
-//                    } catch (SocketTimeoutException e) {
-//                        continue;
-//                    }
-//                    if (str == null) {
-//                        System.out.println("连接已关闭，无法读取数据！");
-//                        break;
-//                    }
-//                    // 打印到屏幕
-//                    System.out.println(str);
-//                } while (!done);
-//            } catch (Exception e) {
-//                if (!done) {
-//                    System.out.println("连接异常断开：" + e.getMessage());
-//                }
-//            } finally {
-//                // 连接关闭
-//                CloseUtils.close(inputStream);
-//            }
-//        }
-//
-//        void exit() {
-//            done = true;
-//            CloseUtils.close(inputStream);
-//        }
-//    }
+            String string = (String)packet.entity();
+            System.out.println( key.toString() + ":" + string );
+        }
+    }
 }

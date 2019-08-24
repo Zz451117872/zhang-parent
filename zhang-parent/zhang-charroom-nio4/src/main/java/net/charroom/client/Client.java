@@ -3,15 +3,16 @@ package net.charroom.client;
 
 import link.net.core.IoContext;
 import link.net.impl.IoSelectorProvider;
+import link.packaging.impl.FileSendPacket;
+import link.utils.FileUtils;
 import net.charroom.client.bean.ServerInfo;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class Client {
     public static void main(String[] args) throws IOException {
+
+        File cachePath = FileUtils.getCacheDir( "client");
 
         IoContext.setup()
                 .ioProvider(new IoSelectorProvider())
@@ -24,7 +25,7 @@ public class Client {
             TCPClient tcpClient = null;
 
             try {
-                tcpClient = TCPClient.startWith(info);
+                tcpClient = TCPClient.startWith(info , cachePath );
                 if (tcpClient == null) {
                     return;
                 }
@@ -49,14 +50,37 @@ public class Client {
         BufferedReader input = new BufferedReader(new InputStreamReader(in));
 
         do {
+
             // 键盘读取一行
             String str = input.readLine();
-            // 发送到服务器
-            tcpClient.send(str);
 
             if ("00bye00".equalsIgnoreCase(str)) {
                 break;
             }
+
+            //--f url
+
+            if( str.startsWith( "--f")){
+
+                String[] array = str.split(" ");
+                if( array.length >= 2 ){
+
+                    String filePth = array[ 1 ];
+                    File file = new File( filePth );
+                    if( file.exists() && file.isFile() ){
+
+                        FileSendPacket packet = new FileSendPacket( file );
+
+                        tcpClient.send( packet );
+                        continue;
+                    }
+                }
+            }
+
+            // 发送到服务器
+            tcpClient.send(str);
+
+
         } while (true);
     }
 
