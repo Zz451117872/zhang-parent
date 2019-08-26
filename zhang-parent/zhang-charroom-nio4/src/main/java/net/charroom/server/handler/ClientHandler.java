@@ -9,6 +9,7 @@ import link.utils.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.nio.channels.SocketChannel;
 
 public class ClientHandler extends Connector{
@@ -40,6 +41,16 @@ public class ClientHandler extends Connector{
     }
 
     @Override
+    protected File createNewReceiveFile(long length, byte[] headerInfo) {
+        return null;
+    }
+
+    @Override
+    protected OutputStream createNewReceiveDirectOutputStream(long length, byte[] headerInfo) {
+        return null;
+    }
+
+    @Override
     public void onChannelClosed(SocketChannel channel) {
         super.onChannelClosed(channel);
         exitBySelf();
@@ -51,7 +62,7 @@ public class ClientHandler extends Connector{
         if( packet.type() == Packet.TYPE_MEMORY_STRING ){
 
             String string = (String)packet.entity();
-            System.out.println( key.toString() + ":" + string );
+            //System.out.println( key.toString() + ":" + string );
 
             clientHandlerCallback.onNewMessageArrived( this , string );
         }

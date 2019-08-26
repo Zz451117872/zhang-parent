@@ -21,113 +21,110 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AsyncPacketReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/impl/async/AsyncPacketReader.java">
+      <file leaf-file-name="SchedulerImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/SchedulerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1566">
-              <caret line="161" column="36" lean-forward="false" selection-start-line="161" selection-start-column="36" selection-end-line="161" selection-end-column="36" />
+            <state relative-caret-position="108">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NameableThreadFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/NameableThreadFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IoStealingSelectorProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/IoStealingSelectorProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="592">
+              <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
               <folding>
-                <element signature="method#requestTakePacket#0;class#AsyncPacketReader#0" expanded="false" />
-                <element signature="method#requestSendHeartbeatFrame#0;class#AsyncPacketReader#0" expanded="false" />
-                <element signature="method#fillData#0;class#AsyncPacketReader#0" expanded="false" />
-                <element signature="method#cancel#0;class#AsyncPacketReader#0" expanded="false" />
-                <element signature="method#appendNewFrame#0;class#AsyncPacketReader#0" expanded="false" />
-                <element signature="method#gerCurrentFrame#0;class#AsyncPacketReader#0" expanded="false" />
-                <element signature="method#popCurrentFrame#0;class#AsyncPacketReader#0" expanded="false" />
-                <element signature="method#removeFrame#0;class#AsyncPacketReader#0" expanded="false" />
-                <element signature="method#generateIdentifier#0;class#AsyncPacketReader#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#IoStealingSelectorProvider#0;class#IoStealingSelectorProvider#0" expanded="false" />
+                <element signature="method#register#0;class#IoStealingSelectorProvider#0" expanded="false" />
+                <element signature="method#unregister#0;class#IoStealingSelectorProvider#0" expanded="false" />
+                <element signature="class#IoStealingThread#0;class#IoStealingSelectorProvider#0" expanded="false" />
+                <element signature="e#2151#2152#0" expanded="true" />
+                <element signature="e#2200#2201#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/net/charroom/server/Server.java">
+      <file leaf-file-name="Packet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/packaging/Packet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="38" column="13" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="38" selection-end-column="13" />
+            <state relative-caret-position="324">
+              <caret line="57" column="19" lean-forward="true" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/net/charroom/client/Client.java">
+      <file leaf-file-name="Frame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/Frame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1404">
-              <caret line="58" column="13" lean-forward="false" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+            <state relative-caret-position="324">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AsyncPacketWriter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/impl/async/AsyncPacketWriter.java">
+      <file leaf-file-name="HeartbeatSendFrame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/frames/HeartbeatSendFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1512">
-              <caret line="122" column="7" lean-forward="false" selection-start-line="122" selection-start-column="7" selection-end-line="122" selection-end-column="7" />
+            <state relative-caret-position="621">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AsyncPacketReader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/async/AsyncPacketReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="79" column="19" lean-forward="true" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#takeIoArgs#0;class#AsyncPacketWriter#0" expanded="false" />
-                <element signature="method#consumeIoArgs#0;class#AsyncPacketWriter#0" expanded="false" />
-                <element signature="method#buildNewFrame#0;class#AsyncPacketWriter#0" expanded="false" />
-                <element signature="method#appendNewPacket#0;class#AsyncPacketWriter#0" expanded="false" />
-                <element signature="method#getPacketChannel#0;class#AsyncPacketWriter#0" expanded="false" />
-                <element signature="method#cancelReceivePacket#0;class#AsyncPacketWriter#0" expanded="false" />
-                <element signature="method#close#0;class#AsyncPacketWriter#0" expanded="false" />
-                <element signature="class#PacketProvider#0;class#AsyncPacketWriter#0" expanded="false" />
-                <element signature="class#PacketModel#0;class#AsyncPacketWriter#0" expanded="false" />
+                <element signature="method#requestTakePacket#0;class#AsyncPacketReader#0" expanded="false" />
+                <element signature="method#requestSendHeartbeatFrame#0;class#AsyncPacketReader#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="AsyncReceiveDispatcher.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/impl/async/AsyncReceiveDispatcher.java">
+        <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/async/AsyncReceiveDispatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+            <state relative-caret-position="447">
+              <caret line="141" column="37" lean-forward="true" selection-start-line="141" selection-start-column="37" selection-end-line="141" selection-end-column="37" />
               <folding>
-                <element signature="method#AsyncReceiveDispatcher#0;class#AsyncReceiveDispatcher#0" expanded="false" />
-                <element signature="method#takePacket#0;class#AsyncReceiveDispatcher#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#onConsumeCompleted#0;class#AsyncReceiveDispatcher#0" expanded="false" />
                 <element signature="method#completedPacket#0;class#AsyncReceiveDispatcher#0" expanded="false" />
-                <element signature="method#provideIoArgs#0;class#AsyncReceiveDispatcher#0" expanded="false" />
-                <element signature="method#close#0;class#AsyncReceiveDispatcher#0" expanded="false" />
-                <element signature="method#start#0;class#AsyncReceiveDispatcher#0" expanded="false" />
-                <element signature="method#registerReceive#0;class#AsyncReceiveDispatcher#0" expanded="false" />
-                <element signature="method#closeAndNotify#0;class#AsyncReceiveDispatcher#0" expanded="false" />
-                <element signature="method#stop#0;class#AsyncReceiveDispatcher#0" expanded="false" />
+                <element signature="e#3186#3187#0" expanded="true" />
+                <element signature="e#3232#3233#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SocketChannelAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/impl/SocketChannelAdapter.java">
+      <file leaf-file-name="ReceiveDispatcher.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/ReceiveDispatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+            <state relative-caret-position="540">
+              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AsyncSendDispatcher.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/impl/async/AsyncSendDispatcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="54" column="40" lean-forward="false" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#AsyncSendDispatcher#0;class#AsyncSendDispatcher#0" expanded="false" />
-                <element signature="method#takePacket#0;class#AsyncSendDispatcher#0" expanded="false" />
-                <element signature="method#completedPacket#0;class#AsyncSendDispatcher#0" expanded="false" />
-                <element signature="method#send#0;class#AsyncSendDispatcher#0" expanded="false" />
-                <element signature="method#requestSend#0;class#AsyncSendDispatcher#0" expanded="false" />
-                <element signature="method#cancel#0;class#AsyncSendDispatcher#0" expanded="false" />
-                <element signature="method#close#0;class#AsyncSendDispatcher#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -141,6 +138,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>onReceiveNewPacket</find>
+    </findStrings>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -157,57 +159,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/desc" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio3/src/main/java/link/net/impl/SocketChannelAdapter.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio3/src/main/java/net/charroom/server/handler/ClientHandler.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio3/src/main/java/net/charroom/client/TCPClient.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio3/src/main/java/link/net/core/Connector.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio3/src/main/java/link/net/impl/async/AsyncReceiveDispatcher.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/Receiver.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/Sender.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/IoProvider.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/utils/CloseUtils.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/packaging/ReceivePacket.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/packaging/impl/AbsByteArrayReceivePacket.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/packaging/impl/StringSendPacket.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/packaging/impl/StringReceivePacket.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/packaging/impl/FileReceivePacket.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/ReceiveDispatcher.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/foos/handler/ConnectorStringPacketChain.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/foos/handler/DefaultNonConnectorStringPacketChain.java" />
         <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/Connector.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/net/charroom/client/TCPClient.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/net/charroom/server/handler/ClientHandler.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/net/charroom/server/ServerStatistics.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/Scheduler.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/IoContext.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/foos/handler/ConnectorHandler.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/foos/handler/DefaultPrintConnectorCloseChain.java" />
         <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/net/charroom/server/TCPServer.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/utils/FileUtils.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/test/java/Test.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/packaging/Packet.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/impl/SocketChannelAdapter.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/ds/BytePriorityNode.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/schedule/IdleTimeoutScheduleJob.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/Frame.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/AbsReceiveFrame.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/AbsSendFrame.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/AbsSendPacketFrame.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/CancelReceiveFrame.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/CancelSendFrame.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/HeartbeatReceiveFrame.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/HeartbeatSendFrame.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/ReceiveEntityFrame.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/ReceiveFrameFactory.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/ReceiveHeaderFrame.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/SendDirectEntityFrame.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/SendHeaderFrame.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/SendEntityFrame.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/IoArgs.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/packaging/SendPacket.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/impl/async/AsyncPacketWriter.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/impl/async/AsyncPacketReader.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/packaging/impl/BytesSendPacket.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/packaging/impl/FileSendPacket.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/impl/IoSelectorProvider.java" />
         <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/net/charroom/server/Server.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/net/charroom/client/Client.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/IoArgs.java" />
         <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/impl/async/AsyncReceiveDispatcher.java" />
-        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/impl/async/AsyncSendDispatcher.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/IoProvider.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/impl/SocketChannelAdapter.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/impl/IoSelectorProvider.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/net/charroom/server/handler/ClientHandler.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/net/charroom/client/TCPClient.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/net/charroom/server/Group.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/net/charroom/server/ServerAcceptor.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/net/charroom/server/handler/ClientHandler.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/foos/handler/DefaultPrintConnectorCloseChain.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/schedule/IdleTimeoutScheduleJob.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/bridge/BridgeIllegalStateException.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/plugin/BufferOverflowException.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/IoArgs.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/exception/EmptyIoArgsException.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/bridge/BridgeSocketDispatcher.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/SchedulerImpl.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/IoTask.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/stealing/StealingSelectorThread.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/stealing/StealingService.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/IoStealingSelectorProvider.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/net/charroom/server/Audio/AudioRoom.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/net/charroom/server/TCPServer.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/packaging/Packet.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/packaging/SendPacket.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/Connector.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/packaging/impl/AbsByteArrayReceivePacket.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/packaging/impl/BytesSendPacket.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/packaging/impl/FileReceivePacket.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/packaging/impl/FileSendPacket.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/packaging/impl/StreamDirectReceivePacket.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/packaging/impl/StreamDirectSendPacket.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/Receiver.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/IoProvider.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/ReceiveDispatcher.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/SendDispatcher.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/SocketChannelAdapter.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/foos/handler/ConnectorHandler.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/async/AsyncSendDispatcher.java" />
+        <option value="$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/async/AsyncReceiveDispatcher.java" />
       </list>
     </option>
   </component>
@@ -234,9 +236,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="869" />
-    <option name="y" value="44" />
-    <option name="width" value="1214" />
+    <option name="x" value="701" />
+    <option name="y" value="63" />
+    <option name="width" value="1203" />
     <option name="height" value="880" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -288,25 +290,25 @@
             <path>
               <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zhang-charroom-nio4" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zhang-charroom-nio4" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zhang-charroom-nio4" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zhang-charroom-nio4" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -314,7 +316,7 @@
             <path>
               <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zhang-charroom-nio4" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -323,7 +325,28 @@
             <path>
               <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zhang-charroom-nio4" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="link" type="462c0819:PsiDirectoryNode" />
+              <item name="foos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="link" type="462c0819:PsiDirectoryNode" />
+              <item name="foos" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -333,7 +356,7 @@
             <path>
               <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zhang-charroom-nio4" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -344,7 +367,19 @@
             <path>
               <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zhang-charroom-nio4" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="link" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="ds" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -355,7 +390,7 @@
             <path>
               <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zhang-charroom-nio4" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -366,7 +401,7 @@
             <path>
               <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zhang-charroom-nio4" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -378,7 +413,43 @@
             <path>
               <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zhang-charroom-nio4" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="link" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="bridge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="link" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="link" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="stealing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -388,7 +459,28 @@
             <path>
               <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zhang-charroom-nio4" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="link" type="462c0819:PsiDirectoryNode" />
+              <item name="packaging" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="link" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -397,7 +489,7 @@
             <path>
               <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zhang-charroom-nio4" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -407,18 +499,7 @@
             <path>
               <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zhang-charroom-nio4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
-              <item name="charroom" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zhang-charroom-nio4" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -429,9 +510,26 @@
             <path>
               <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zhang-charroom-nio4" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+              <item name="charroom" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="Audio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhang-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhang-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang-charroom-nio5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+              <item name="charroom" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -454,11 +552,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\moc\zhang-parent\zhang-charroom-nio4\src\main\java\link\net\impl\async" />
-      <recent name="E:\moc\zhang-parent\zhang-charroom-nio4\src\main\java\link\net\frames" />
-      <recent name="E:\moc\zhang-parent\zhang-charroom-nio4\src\main\java\link\net\core" />
-      <recent name="E:\moc\zhang-parent\zhang-charroom-nio4\src\main\java\link\net\core\schedule" />
-      <recent name="E:\moc\zhang-parent\zhang-charroom-nio4\src\main\java\link\net\core\ds" />
+      <recent name="E:\moc\zhang-parent\zhang-charroom-nio5\src\main\java\link\net\impl\async" />
+      <recent name="E:\moc\zhang-parent\zhang-charroom-nio5\src\main\java\link\foos\handler" />
+      <recent name="E:\moc\zhang-parent\zhang-charroom-nio5\src\main\java\link\net\core" />
+      <recent name="E:\moc\zhang-parent\zhang-charroom-nio5\src\main\java\link\packaging\impl" />
+      <recent name="E:\moc\zhang-parent\zhang-charroom-nio5\src\main\java\link\packaging" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -676,32 +774,33 @@
       <updated>1566372880963</updated>
       <workItem from="1566372885337" duration="537000" />
       <workItem from="1566373617791" duration="65986000" />
-      <workItem from="1566639535521" duration="1347000" />
+      <workItem from="1566639535521" duration="21467000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67870000" />
+    <option name="totallyTimeSpent" value="87990000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="869" y="44" width="1214" height="880" extended-state="0" />
+    <frame x="701" y="63" width="1203" height="880" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13080895" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51455027" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.62830687" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07659208" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37966985" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940991" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -712,7 +811,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32804233" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -724,178 +822,34 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio3/src/main/java/link/net/impl/IoSelectorProvider.java">
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/packaging/impl/BytesSendPacket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="117" column="19" lean-forward="false" selection-start-line="117" selection-start-column="19" selection-end-line="117" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio3/src/main/java/link/net/impl/SocketChannelAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-163">
-          <caret line="59" column="35" lean-forward="true" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/utils/CloseUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/IoContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/IoProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/Receiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/SendDispatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/Sender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/packaging/impl/BytesReceivePacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/packaging/impl/AbsByteArrayReceivePacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="11" column="77" lean-forward="false" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/packaging/ReceivePacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/packaging/impl/StringSendPacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/packaging/impl/FileReceivePacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/packaging/impl/StringReceivePacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/ReceiveDispatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="14" column="72" lean-forward="false" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/Connector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state relative-caret-position="189">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
           <folding>
-            <element signature="method#setup#0;class#Connector#0" expanded="false" />
-            <element signature="e#3273#3274#0" expanded="false" />
-            <element signature="e#3336#3337#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/net/charroom/client/TCPClient.java">
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/packaging/impl/FileSendPacket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="69" column="9" lean-forward="false" selection-start-line="65" selection-start-column="7" selection-end-line="69" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/net/charroom/server/handler/ClientHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/net/charroom/server/TCPServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="148" column="120" lean-forward="false" selection-start-line="148" selection-start-column="120" selection-end-line="148" selection-end-column="120" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/net/charroom/client/ClientTest.java" />
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/utils/FileUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="190">
+          <caret line="13" column="46" lean-forward="false" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/test/java/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="39" lean-forward="false" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/packaging/Packet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="53" column="20" lean-forward="false" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/schedule/IdleTimeoutScheduleJob.java" />
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/ds/BytePriorityNode.java">
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/packaging/impl/StringSendPacket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
@@ -903,272 +857,442 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/CancelReceiveFrame.java">
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/packaging/impl/StringReceivePacket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/HeartbeatReceiveFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="16" column="36" lean-forward="false" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/HeartbeatSendFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="13" column="63" lean-forward="false" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/ReceiveHeaderFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/Frame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/AbsReceiveFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/ReceiveFrameFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/SendHeaderFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-490">
-          <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/SendEntityFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/AbsSendFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="51" column="7" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/ReceiveEntityFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="21" column="61" lean-forward="true" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/core/IoArgs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="163" column="17" lean-forward="false" selection-start-line="163" selection-start-column="17" selection-end-line="163" selection-end-column="17" />
-          <folding>
-            <element signature="method#read#0;class#IoArgs#0" expanded="false" />
-            <element signature="e#2764#2765#0" expanded="false" />
-            <element signature="e#2809#2810#0" expanded="false" />
-            <element signature="method#readFrom#1;class#IoArgs#0" expanded="false" />
-            <element signature="method#writeTo#1;class#IoArgs#0" expanded="false" />
-            <element signature="method#fillEmpty#0;class#IoArgs#0" expanded="false" />
-            <element signature="e#3493#3494#0" expanded="false" />
-            <element signature="e#3517#3518#0" expanded="false" />
-            <element signature="class#IoArgsEventProcessor#0;class#IoArgs#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/SendDirectEntityFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="61" column="42" lean-forward="true" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/packaging/SendPacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="216">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/CancelSendFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="54" lean-forward="false" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/frames/AbsSendPacketFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/packaging/impl/BytesSendPacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/packaging/impl/FileSendPacket.java">
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/packaging/impl/StreamDirectSendPacket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="17" />
+          <caret line="10" column="54" lean-forward="false" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
           <folding>
-            <element signature="e#434#435#0" expanded="true" />
-            <element signature="e#458#459#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/impl/IoSelectorProvider.java">
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/packaging/impl/StreamDirectReceivePacket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="199" column="38" lean-forward="true" selection-start-line="199" selection-start-column="38" selection-end-line="199" selection-end-column="38" />
+        <state relative-caret-position="55">
+          <caret line="10" column="60" lean-forward="false" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
           <folding>
-            <element signature="method#startRead#0;class#IoSelectorProvider#0" expanded="false" />
-            <element signature="method#startWrite#0;class#IoSelectorProvider#0" expanded="false" />
-            <element signature="method#close#0;class#IoSelectorProvider#0" expanded="false" />
-            <element signature="method#waitSelection#0;class#IoSelectorProvider#0" expanded="false" />
-            <element signature="method#unRegisterSelection#0;class#IoSelectorProvider#0" expanded="false" />
-            <element signature="method#handleSelection#0;class#IoSelectorProvider#0" expanded="false" />
-            <element signature="class#IoProviderThreadFactory#0;class#IoSelectorProvider#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/impl/async/AsyncPacketReader.java">
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/packaging/impl/AbsByteArrayReceivePacket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1566">
-          <caret line="161" column="36" lean-forward="false" selection-start-line="161" selection-start-column="36" selection-end-line="161" selection-end-column="36" />
+        <state relative-caret-position="324">
+          <caret line="12" column="77" lean-forward="false" selection-start-line="12" selection-start-column="77" selection-end-line="12" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/packaging/impl/BytesReceivePacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/packaging/impl/FileReceivePacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="13" column="52" lean-forward="false" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/foos/handler/ConnectorHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="67" column="18" lean-forward="false" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
+            <element signature="e#1141#1142#0" expanded="true" />
+            <element signature="e#1909#1910#0" expanded="true" />
+            <element signature="e#1963#1964#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/SocketChannelAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="125" column="50" lean-forward="false" selection-start-line="125" selection-start-column="50" selection-end-line="125" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/foos/handler/ConnectorCloseChain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/foos/handler/ConnectorHandlerChain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="method#appendLast#0;class#ConnectorHandlerChain#0" expanded="false" />
+            <element signature="method#handle#0;class#ConnectorHandlerChain#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/foos/handler/ConnectorStringPacketChain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/foos/handler/DefaultNonConnectorStringPacketChain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/foos/handler/DefaultPrintConnectorCloseChain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/foos/Foo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/Connector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="222" column="7" lean-forward="true" selection-start-line="222" selection-start-column="7" selection-end-line="222" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/IoArgs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/IoContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/IoProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#HandleProviderCallback#0;class#IoProvider#0" expanded="false" />
+            <element signature="method#run#0;class#HandleProviderCallback#0;class#IoProvider#0" expanded="false" />
+            <element signature="method#onProcessIo#0;class#HandleProviderCallback#0;class#IoProvider#0" expanded="false" />
+            <element signature="method#checkAttachNull#0;class#HandleProviderCallback#0;class#IoProvider#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/IoTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/Receiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/ScheduleJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-782">
+          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/Scheduler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/Sender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/SendDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/frames/AbsReceiveFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/frames/AbsSendFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/frames/AbsSendPacketFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/frames/CancelReceiveFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/frames/CancelSendFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/frames/HeartbeatReceiveFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/frames/ReceiveEntityFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/async/AsyncPacketWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/async/AsyncSendDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="178" column="45" lean-forward="false" selection-start-line="178" selection-start-column="45" selection-end-line="178" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2569#2570#0" expanded="true" />
+            <element signature="e#2609#2610#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/bridge/BridgeIllegalStateException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/bridge/BridgeSocketDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="55" column="16" lean-forward="false" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/plugin/BufferOverflowException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/plugin/CircularByteBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/stealing/StealingSelectorThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="173" column="0" lean-forward="false" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/stealing/StealingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/SchedulerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/NameableThreadFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/IoStealingSelectorProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#IoStealingSelectorProvider#0;class#IoStealingSelectorProvider#0" expanded="false" />
+            <element signature="method#register#0;class#IoStealingSelectorProvider#0" expanded="false" />
+            <element signature="method#unregister#0;class#IoStealingSelectorProvider#0" expanded="false" />
+            <element signature="class#IoStealingThread#0;class#IoStealingSelectorProvider#0" expanded="false" />
+            <element signature="e#2151#2152#0" expanded="true" />
+            <element signature="e#2200#2201#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/packaging/Packet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="57" column="19" lean-forward="true" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/Frame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/frames/HeartbeatSendFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/async/AsyncPacketReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="79" column="19" lean-forward="true" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
           <folding>
             <element signature="method#requestTakePacket#0;class#AsyncPacketReader#0" expanded="false" />
             <element signature="method#requestSendHeartbeatFrame#0;class#AsyncPacketReader#0" expanded="false" />
-            <element signature="method#fillData#0;class#AsyncPacketReader#0" expanded="false" />
-            <element signature="method#cancel#0;class#AsyncPacketReader#0" expanded="false" />
-            <element signature="method#appendNewFrame#0;class#AsyncPacketReader#0" expanded="false" />
-            <element signature="method#gerCurrentFrame#0;class#AsyncPacketReader#0" expanded="false" />
-            <element signature="method#popCurrentFrame#0;class#AsyncPacketReader#0" expanded="false" />
-            <element signature="method#removeFrame#0;class#AsyncPacketReader#0" expanded="false" />
-            <element signature="method#generateIdentifier#0;class#AsyncPacketReader#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/net/charroom/server/Server.java">
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/impl/async/AsyncReceiveDispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="38" column="13" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="38" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/net/charroom/client/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1404">
-          <caret line="58" column="13" lean-forward="false" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/impl/async/AsyncPacketWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
-          <caret line="122" column="7" lean-forward="false" selection-start-line="122" selection-start-column="7" selection-end-line="122" selection-end-column="7" />
+        <state relative-caret-position="447">
+          <caret line="141" column="37" lean-forward="true" selection-start-line="141" selection-start-column="37" selection-end-line="141" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#takeIoArgs#0;class#AsyncPacketWriter#0" expanded="false" />
-            <element signature="method#consumeIoArgs#0;class#AsyncPacketWriter#0" expanded="false" />
-            <element signature="method#buildNewFrame#0;class#AsyncPacketWriter#0" expanded="false" />
-            <element signature="method#appendNewPacket#0;class#AsyncPacketWriter#0" expanded="false" />
-            <element signature="method#getPacketChannel#0;class#AsyncPacketWriter#0" expanded="false" />
-            <element signature="method#cancelReceivePacket#0;class#AsyncPacketWriter#0" expanded="false" />
-            <element signature="method#close#0;class#AsyncPacketWriter#0" expanded="false" />
-            <element signature="class#PacketProvider#0;class#AsyncPacketWriter#0" expanded="false" />
-            <element signature="class#PacketModel#0;class#AsyncPacketWriter#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/impl/async/AsyncReceiveDispatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
-          <folding>
-            <element signature="method#AsyncReceiveDispatcher#0;class#AsyncReceiveDispatcher#0" expanded="false" />
-            <element signature="method#takePacket#0;class#AsyncReceiveDispatcher#0" expanded="false" />
+            <element signature="method#onConsumeCompleted#0;class#AsyncReceiveDispatcher#0" expanded="false" />
             <element signature="method#completedPacket#0;class#AsyncReceiveDispatcher#0" expanded="false" />
-            <element signature="method#provideIoArgs#0;class#AsyncReceiveDispatcher#0" expanded="false" />
-            <element signature="method#close#0;class#AsyncReceiveDispatcher#0" expanded="false" />
-            <element signature="method#start#0;class#AsyncReceiveDispatcher#0" expanded="false" />
-            <element signature="method#registerReceive#0;class#AsyncReceiveDispatcher#0" expanded="false" />
-            <element signature="method#closeAndNotify#0;class#AsyncReceiveDispatcher#0" expanded="false" />
-            <element signature="method#stop#0;class#AsyncReceiveDispatcher#0" expanded="false" />
+            <element signature="e#3186#3187#0" expanded="true" />
+            <element signature="e#3232#3233#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/impl/SocketChannelAdapter.java">
+    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio5/src/main/java/link/net/core/ReceiveDispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+        <state relative-caret-position="540">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhang-charroom-nio4/src/main/java/link/net/impl/async/AsyncSendDispatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="54" column="40" lean-forward="false" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#AsyncSendDispatcher#0;class#AsyncSendDispatcher#0" expanded="false" />
-            <element signature="method#takePacket#0;class#AsyncSendDispatcher#0" expanded="false" />
-            <element signature="method#completedPacket#0;class#AsyncSendDispatcher#0" expanded="false" />
-            <element signature="method#send#0;class#AsyncSendDispatcher#0" expanded="false" />
-            <element signature="method#requestSend#0;class#AsyncSendDispatcher#0" expanded="false" />
-            <element signature="method#cancel#0;class#AsyncSendDispatcher#0" expanded="false" />
-            <element signature="method#close#0;class#AsyncSendDispatcher#0" expanded="false" />
           </folding>
         </state>
       </provider>

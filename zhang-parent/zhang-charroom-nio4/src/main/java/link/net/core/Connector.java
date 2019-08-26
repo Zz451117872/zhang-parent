@@ -14,6 +14,7 @@ import link.packaging.impl.StringSendPacket;
 import java.io.Closeable;
 import java.io.File;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.nio.channels.SocketChannel;
 import java.util.UUID;
 
@@ -104,10 +105,14 @@ public abstract class Connector implements Closeable, SocketChannelAdapter.OnCha
     protected abstract File createReceiveFile();
 
     protected void onReceiveNewPacket( ReceivePacket packet ) {
-        System.out.println( key.toString() + " ,type:" + packet.type() + " ,length:"+ packet.length());
+        //System.out.println( key.toString() + " ,type:" + packet.type() + " ,length:"+ packet.length());
     }
 
     protected void onReceiveNewMessage( String str ) {
         System.out.println( key.toString() + ":" + str);
     }
+
+    protected abstract File createNewReceiveFile(long length, byte[] headerInfo);
+
+    protected abstract OutputStream createNewReceiveDirectOutputStream(long length, byte[] headerInfo);
 }

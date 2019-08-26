@@ -10,6 +10,7 @@ import net.charroom.client.bean.ServerInfo;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.net.Inet4Address;
 import java.net.InetSocketAddress;
 import java.nio.channels.SocketChannel;
@@ -66,7 +67,17 @@ public class TCPClient extends Connector{
         if( packet.type() == Packet.TYPE_MEMORY_STRING ){
 
             String string = (String)packet.entity();
-            System.out.println( key.toString() + ":" + string );
+            //System.out.println( key.toString() + ":" + string );
         }
+    }
+
+    @Override
+    protected File createNewReceiveFile(long length, byte[] headerInfo) {
+        return null;
+    }
+
+    @Override
+    protected OutputStream createNewReceiveDirectOutputStream(long length, byte[] headerInfo) {
+        return null;
     }
 }
