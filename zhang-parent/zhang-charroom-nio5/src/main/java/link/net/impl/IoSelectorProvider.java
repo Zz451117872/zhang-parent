@@ -1,7 +1,7 @@
 package link.net.impl;
 
-import net.qiujuer.library.clink.core.IoProvider;
-import net.qiujuer.library.clink.utils.CloseUtils;
+import link.net.core.IoProvider;
+import link.utils.CloseUtils;
 
 import java.io.IOException;
 import java.nio.channels.*;

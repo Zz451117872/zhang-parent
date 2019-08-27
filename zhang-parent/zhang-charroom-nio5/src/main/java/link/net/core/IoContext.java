@@ -39,8 +39,6 @@ public class IoContext {
         scheduler.close();
     }
 
-
-
     public static class StartedBoot {
         private IoProvider ioProvider;
         private Scheduler scheduler;

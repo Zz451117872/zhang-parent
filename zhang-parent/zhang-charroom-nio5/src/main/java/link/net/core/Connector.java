@@ -56,7 +56,10 @@ public abstract class Connector implements Closeable, SocketChannelAdapter.OnCha
     }
 
     public void send(String msg) {
+
         SendPacket packet = new StringSendPacket(msg);
+
+        System.out.println( "Connector"+this + "packet mag");
         sendDispatcher.send(packet);
     }
 
@@ -196,7 +199,7 @@ public abstract class Connector implements Closeable, SocketChannelAdapter.OnCha
      * @param packet Packet
      */
     protected void onReceivedPacket(ReceivePacket packet) {
-        // System.out.println(key.toString() + ":[New Packet]-Type:" + packet.type() + ", Length:" + packet.length);
+         System.out.println(key.toString() + ":[New Packet]-Type:" + packet.type() + ", Length:" + packet.length());
     }
 
     /**

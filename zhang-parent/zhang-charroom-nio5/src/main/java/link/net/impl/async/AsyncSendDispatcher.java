@@ -39,6 +39,8 @@ public class AsyncSendDispatcher implements SendDispatcher,
     public void send(SendPacket packet) {
         try {
             queue.put(packet);
+
+            System.out.println( "AsyncSendDispatcher:"+ this + " requestSend");
             requestSend(false);
         } catch (InterruptedException ignored) {
         }
@@ -129,6 +131,7 @@ public class AsyncSendDispatcher implements SendDispatcher,
                 isRegisterSending.set(true);
                 try {
                     // 真实注册
+                    System.out.println( "AsyncSendDispatcher:"+ this + " postSendAsync");
                     sender.postSendAsync();
                 } catch (Exception e) {
                     e.printStackTrace();

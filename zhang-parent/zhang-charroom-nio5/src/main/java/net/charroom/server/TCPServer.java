@@ -1,5 +1,6 @@
 package net.charroom.server;
 
+
 import link.foos.Foo;
 import link.foos.handler.ConnectorCloseChain;
 import link.foos.handler.ConnectorHandler;
@@ -196,6 +197,7 @@ public class TCPServer implements ServerAcceptor.AcceptListener,
     private class ParseCommandConnectorStringPacketChain extends ConnectorStringPacketChain {
         @Override
         protected boolean consume(ConnectorHandler handler, StringReceivePacket stringReceivePacket) {
+
             String str = stringReceivePacket.entity();
             if (str.startsWith(Foo.COMMAND_GROUP_JOIN)) {
                 Group group = groups.get(Foo.DEFAULT_GROUP_NAME);
